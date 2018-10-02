@@ -34,7 +34,7 @@ public class Controller {
             circles[i].setFill(color);
             circles[i].setCenterX(rand.nextDouble()*600);
             circles[i].setCenterY(rand.nextDouble()*600);
-            circles[i].setRadius(rand.nextDouble()*5);
+            circles[i].setRadius(rand.nextDouble()*25);
 
             gc.strokeOval(circles[i].getCenterX(), circles[i].getCenterY(), circles[i].getRadius(), circles[i].getRadius());
             gc.setFill(circles[i].getFill());
@@ -54,9 +54,9 @@ public class Controller {
         switch (rand.nextInt(5)){
             case 0: return Color.RED;
             case 1: return Color.BLUE;
-            case 2: return Color.YELLOW;
-            case 3: return Color.GREEN;
-            case 4: return Color.PINK;
+            case 2: return Color.AQUA;
+            case 3: return Color.GREENYELLOW;
+            case 4: return Color.HOTPINK;
         }
 
         return Color.RED;
