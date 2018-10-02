@@ -23,12 +23,19 @@ public class Controller {
         Random rand = new Random();
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
+        Color[] colors = new Color[5];
+        colors[0] = Color.RED;
+        colors[1] = Color.BLUE;
+        colors[2] = Color.AQUA;
+        colors[3] = Color.GREENYELLOW;
+        colors[4] = Color.HOTPINK;
+
         var time1 = System.currentTimeMillis();
         MemoryUsage heapMemoryUsage1 = ManagementFactory.getMemoryMXBean().getHeapMemoryUsage();
         var mem1 = heapMemoryUsage1.getUsed();
 
         for (int i = 0; i < 100000; i++) {
-            Color color = getRandColor();
+            Color color = colors[rand.nextInt(5)];
             circles[i] = new Circle(); //Ny sirkel til hvert objekt
 
             circles[i].setFill(color);
@@ -47,19 +54,6 @@ public class Controller {
 
         System.out.println("Time: "+(time2-time1) + " ms");
         System.out.println("Memory: "+(mem2-mem1)/1000000 + " MB");
-    }
-
-    private Color getRandColor(){
-        Random rand = new Random();
-        switch (rand.nextInt(5)){
-            case 0: return Color.RED;
-            case 1: return Color.BLUE;
-            case 2: return Color.AQUA;
-            case 3: return Color.GREENYELLOW;
-            case 4: return Color.HOTPINK;
-        }
-
-        return Color.RED;
     }
 
 }
