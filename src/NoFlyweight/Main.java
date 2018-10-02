@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("NoFlyweight.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Without Flyweight test");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

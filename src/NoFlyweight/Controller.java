@@ -23,12 +23,7 @@ public class Controller {
         Random rand = new Random();
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        Color[] colors = new Color[5];
-        colors[0] = Color.RED;
-        colors[1] = Color.BLUE;
-        colors[2] = Color.AQUA;
-        colors[3] = Color.GREENYELLOW;
-        colors[4] = Color.HOTPINK;
+        Color[] colors = new Color[]{Color.RED, Color.BLUE, Color.AQUA, Color.GREENYELLOW, Color.HOTPINK};
 
         //TIME AND MEMORY LOG START
         var time1 = System.currentTimeMillis();
