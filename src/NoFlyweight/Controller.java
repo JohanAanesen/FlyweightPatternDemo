@@ -41,7 +41,6 @@ public class Controller {
             circles[i].setRadius(rand.nextDouble()*25);     //Random radius
 
             //DRAWING CIRCLE TO CANVAS
-            gc.strokeOval(circles[i].getCenterX(), circles[i].getCenterY(), circles[i].getRadius(), circles[i].getRadius());
             gc.setFill(circles[i].getFill());
             gc.fillOval(circles[i].getCenterX(), circles[i].getCenterY(), circles[i].getRadius(), circles[i].getRadius());
         }

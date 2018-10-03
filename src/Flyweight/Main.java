@@ -14,6 +14,7 @@ public class Main extends Application {
         primaryStage.setTitle("Flyweight test");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setAlwaysOnTop(true);
     }
 
 
